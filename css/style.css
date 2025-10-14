@@ -1,0 +1,122 @@
+@charset "UTF-8";
+/* Обнуление стилей */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  font-style: 16px;
+}
+
+body {
+  line-height: 1;
+  color: #25201f;
+}
+body._lock {
+  overflow: hidden;
+}
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/***************************************/
+.main {
+  flex-grow: 1;
+}
+
+[class*=__container] {
+  margin: 0 auto;
+  max-width: 1230px;
+  padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+  [class*=__container] {
+    padding: 0 0;
+  }
+}
+.data__body {
+  padding: 10px 0 10px 5px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: #bbbbbb;
+}
+.data__box {
+  display: flex;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  align-items: center;
+}
+.data__input {
+  max-width: 100px;
+  border: #000 1px solid;
+  padding: 2px 5px;
+}
+.data__set {
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+  padding: 10px 10px;
+  border: 1px #808080 solid;
+  max-width: 310px;
+}
+.data__set legend {
+  font-weight: 600;
+}
+.calc__body {
+  display: flex;
+  padding: 10px 0 10px 5px;
+  flex-direction: column;
+  row-gap: 10px;
+  background-color: #98fb98;
+}
+.calc__lists {
+  font-size: 18px;
+}
+.calc__price {
+  font-size: 18px;
+}
+.title {
+  font-size: 18px;
+}

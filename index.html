@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Профлист</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header"></header>
+        <main class="main">
+            <section class="data">
+                <div class="data__container">
+                    <div class="data__body">
+                        <div class="data__box">
+                            <label for="long">Длина:</label><input class="data__input data__input_long" type="number" id="long" value="20">
+                        </div>
+                        <div class="data__box">
+                            <label for="height">Высота:</label><input class="data__input data__input_height" type="number" id="height" value="2">
+                        </div>
+                        <div class="data__box">
+                            <label for="price_c">Цена(Крашенный):</label><input class="data__input data__input_price-c" type="number" id="price_c" value="3000">
+                        </div>
+                        <div class="data__box">
+                            <label for="price_o">Цена(Оцинкованный):</label><input class="data__input data__input_price-o" type="number" id="price_o" value="2700">
+                        </div>
+                        <div class="data__box">
+                            <label for="move_gaz">Газель:</label><input class="data__input data__input_gaz" type="number" id="move_gaz" value="8000">
+                        </div>
+                        <div class="data__box">
+                            <label for="move_man">Манипулятор:</label><input class="data__input data__input_man" type="number" id="move_man" value="25000">
+                        </div>
+                        <fieldset class="data__set">
+                            <legend>Полка</legend>
+                            <input class="data__radio radio__shelf" type="radio" name="shelf" value="twenty" id="twenty" checked><label for="twenty">20</label>
+                            <input class="data__radio radio__shelf" type="radio" name="shelf" value="eight" id="eight"><label for="eight">8</label>
+                        </fieldset>
+                        <fieldset class="data__set">
+                            <legend>Крашенный/Оцинкованный</legend>
+                            <input class="data__radio radio__color" type="radio" name="color" value="color" id="color" checked><label for="color">Крашенный</label>
+                            <input class="data__radio radio__color" type="radio" name="color" value="cinc" id="cinc"><label for="cinc">Оцинкованный</label>
+                        </fieldset>
+                     <!--<fieldset class="data__set">
+                            <legend>ОКРУГЛЕНИЕ</legend>
+                            <input class="data__radio radio__round" type="radio" name="round" value="round" id="round" checked><label for="round">ОКРУГЛЕНИЕ ЛИСТОВ БОЛЬШУЮ</label>
+                            <input class="data__radio radio__round" type="radio" name="round" value="notround" id="notround"><label for="notround">ОКРУГЛЕНИЕ ЛИСТОВ МЕНЬШУЮ </label>
+                        </fieldset>-->   
+                        <fieldset class="data__set">
+                            <legend>Доставка</legend>
+                            <input class="data__radio radio__move" type="radio" name="move" value="gaz" id="gaz" checked><label for="gaz">Газель</label>
+                            <input class="data__radio radio__move" type="radio" name="move" value="man" id="man"><label for="man">Манипулятор</label>
+                            <input class="data__radio radio__move" type="radio" name="move" value="not" id="not"><label for="not">Без доставки</label>
+                        </fieldset>
+                    </div>
+                </div>
+            </section>
+            <section class="calc">
+                <div class="calc__container">
+                    <div class="calc__body">
+                        <h2 class="calc__title title">Итого:</h2>
+                        <div class="calc__box">
+                            <span class="calc__name">Листы(без округлния):</span>
+                            <span class="calc__lists-n field"></span>
+                        </div>
+                        <div class="calc__box">
+                            <span class="calc__name">Листы:</span>
+                            <span class="calc__lists field"></span>
+                        </div>
+                        <div class="calc__box">
+                            <span class="calc__name">Площадь:</span>
+                            <span class="calc__sqr field"></span>
+                        </div>
+                        <div class="calc__box">
+                            <span class="calc__name">Цена:</span>
+                            <span class="calc__price field"></span>
+                        </div>
+                        <div class="calc__box">
+                            <span class="calc__name">Цена за 1 лист:</span>
+                            <span class="calc__price-list field"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+        </footer>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
