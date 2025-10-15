@@ -66,15 +66,9 @@ body._lock {
 
 [class*=__container] {
   margin: 0 auto;
-  max-width: 1230px;
-  padding: 0 10px;
+  max-width: 340px;
 }
 
-@media (max-width: 767px) {
-  [class*=__container] {
-    padding: 0 0;
-  }
-}
 .data__body {
   padding: 10px 0 10px 5px;
   display: flex;
@@ -83,14 +77,17 @@ body._lock {
   background-color: #bbbbbb;
 }
 .data__box {
+  padding: 0 25px 0 0;
   display: flex;
   -moz-column-gap: 10px;
        column-gap: 10px;
   align-items: center;
+  justify-content: space-between;
 }
 .data__input {
   max-width: 100px;
-  border: #000 1px solid;
+  border: #000000 1px solid;
+  border-radius: 7px;
   padding: 2px 5px;
 }
 .data__set {

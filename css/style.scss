@@ -61,15 +61,9 @@ body {
 
 [class*="__container"]{
     margin: 0 auto;
-    max-width: 1230px;
-    padding: 0 10px;
+    max-width: 340px;
 }
 
-@media (max-width: 767px){
-    [class*="__container"]{
-        padding: 0 0;
-    }
-}
 .data {
 
     &__container {
@@ -84,14 +78,17 @@ body {
     }
 
     &__box {
+        padding: 0 25px 0 0;
         display: flex;
         column-gap: 10px;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__input {
         max-width: 100px;
-        border: #000 1px solid;
+        border: #000000 1px solid;
+        border-radius: 7px;
         padding: 2px 5px;
 
         &_long {
