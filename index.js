@@ -14,8 +14,8 @@ function getData() {
     let datas = [];
     datas.push(document.querySelector('input[name="shelf"]:checked').value);
     datas.push(document.querySelector('input[name="color"]:checked').value);
-    //datas.push(document.querySelector('input[name="round"]:checked').value);
-    datas.push("round");
+    datas.push(document.querySelector('input[name="round"]:checked').value);
+    //datas.push("round");
     datas.push(document.querySelector('input[name="move"]:checked').value);
     return datas
 }
@@ -26,8 +26,10 @@ function calcDates(length, lengthFull, datas) {
     let priceList = 0;
     let priceLists = 0;
     let move = 0;
+    let countN = 0
+    let priceO = 0;
     lists =  +lengthField.value / length;
-    countListsN.textContent = lists.toFixed(2);
+    countN =  lists.toFixed(2);
     if (datas[2] === "round") {
         lists = Math.ceil(lists);  
     } else {
@@ -39,7 +41,7 @@ function calcDates(length, lengthFull, datas) {
     } else {
         priceList = +priceCincField.value;
     }
-    priceOne.textContent = Math.round((sqr * priceList) / lists);
+    priceO = Math.round((sqr * priceList) / lists);
     switch (datas[3]) {
         case "gaz":
             move = +gazField.value;
@@ -53,9 +55,15 @@ function calcDates(length, lengthFull, datas) {
             priceLists = sqr * priceList;
             break;
     }
+    setDatas(lists, sqr, priceLists, priceO, countN);
+}
+
+function setDatas(lists, sqr, priceA, priceO, countN) {
     countLists.textContent = lists;
     square.textContent = sqr.toFixed(1);
-    price.textContent = Math.round(priceLists);
+    price.textContent = Math.round(priceA);
+    priceOne.textContent = priceO;
+    countListsN.textContent = countN;
 }
 
 function calc(datas) {
